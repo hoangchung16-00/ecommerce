@@ -28,5 +28,17 @@ $(document).ready(function () {
             activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
             zIndex: 2147483647 // Z-Index for the overlay
         });
+
+
     });
+
+
+
 });
+
+
+
+function deleteRowTable(r) {
+    var i=r.parentNode.rowIndex;
+    document.getElementById("tblCart").deleteRow(i);
+}

@@ -21,13 +21,14 @@
                             <p>Web ID: ${product.id}</p>
                             <div class="rating">
                                 <div class="stars">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
+                                    <c:forEach begin="1" end="${ratingStars}">
+                                        <span class="fa fa-star checked"></span>
+                                    </c:forEach>
+                                    <c:forEach begin="1" end="${5 - ratingStars}">
+                                        <span class="fa fa-star"></span>
+                                    </c:forEach>
                                 </div>
-                                <span class="review-no">41 reviews</span>
+                                <span class="review-no">${totalReviews}</span>
                             </div>
                             <img src="images/product-details/rating.png" alt="" />
                                 <span>

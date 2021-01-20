@@ -16,14 +16,14 @@
                                 <div class="productinfo text-center">
                                     <img src="/images/${product.image}" alt=""/>
                                     <tag-price:price price="${product.price}"/>
-                                    <p>${product.name}</p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                    <p><a href="/product-detail/${product.id}">${product.name}</a></p>
+                                    <a href="/add-to-cart?productId=${product.id}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                 </div>
                                 <div class="product-overlay">
                                     <div class="overlay-content">
                                         <tag-price:price price="${product.price}"/>
                                         <p>${product.name}</p>
-                                        <a href="/product-detail/${product.id}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a href="/add-to-cart?productId=${product.id}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                 </div>
                             </div>

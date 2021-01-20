@@ -21,8 +21,10 @@ public class ProductDetailController {
         if(productService.getProductById(productId) == null){
             return "404";
         }
-        model.addAttribute("reviews",reviewService.getReviewsByProductId(productId));
+        model.addAttribute("totalReviews",reviewService.getTotalreviewsByProductId(productId));
         model.addAttribute("product",productService.getProductById(productId));
+        model.addAttribute("ratingStars",reviewService.getRatingStarsByProductId(productId));
+
         return "product-detail";
     }
 }

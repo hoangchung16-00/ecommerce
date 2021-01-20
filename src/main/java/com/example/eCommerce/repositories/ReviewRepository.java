@@ -23,4 +23,12 @@ public class ReviewRepository {
         }
         return reviews;
     }
+
+    public Integer getTotalreviewsByProductId(final Long productId){
+        SqlRowSet sqlRowSet = jdbcTemplate.queryForRowSet("SELECT COUNT(*) AS totalReview FROM reviews WHERE product_id=?",productId);
+        if(sqlRowSet.next()){
+            return sqlRowSet.getInt("totalReview");
+        }
+        return null;
+    }
 }

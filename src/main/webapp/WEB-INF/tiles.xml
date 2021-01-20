@@ -61,4 +61,8 @@
     <definition name="admin/edit-category" extends="admin.definition">
         <put-attribute name="body" value="/WEB-INF/jsp/admin/editCategory.jsp"/>
     </definition>
+    <!--Cart : client-->
+    <definition name="cart" extends="client.definition">
+        <put-attribute name="body" value="/WEB-INF/jsp/client/cart.jsp"/>
+    </definition>
 </tiles-definitions>
